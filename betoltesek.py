@@ -58,14 +58,23 @@ def kep(kepnev):
     amennyiben azok .png formátumban vannak"""
     png = (str(kepnev) + ".png")
     if kepnev != "favicon":
-        return pygame.image.load(png).convert_alpha()
+        try:
+            return pygame.image.load(png).convert_alpha()
+        except:
+            pass
     else:
-        return pygame.image.load(png)
+        try:
+            return pygame.image.load(png)
+        except:
+            pass
 
 
 def kepmegjelenites(ablak, nev):
     """Ennek segítségével jeleníti meg az adott objektumot a képernyőn"""
-    return ablak.blit(nev.kep, [nev.szelesseg, nev.magassag])
+    try:
+        return ablak.blit(nev.kep, [nev.szelesseg, nev.magassag])
+    except:
+        pass
 
 
 def ablak():  # Pygame betöltés és favicon betöltés
@@ -73,7 +82,10 @@ def ablak():  # Pygame betöltés és favicon betöltés
     pygame.init()
     pygame.display.set_caption("Flappy Bird")
     favicon = kep("favicon")
-    pygame.display.set_icon(favicon)
+    try:
+        pygame.display.set_icon(favicon)
+    except:
+        pass
 
 
 def szamok():

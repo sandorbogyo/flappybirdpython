@@ -21,7 +21,10 @@ class Valasztas:
 
 def elforgatas(kep, fok):
     """Ennek segítségével elforgathatok egy képet így például a madarat miután meghal"""
-    return pygame.transform.rotate(kep, fok)
+    try:
+        return pygame.transform.rotate(kep, fok)
+    except:
+        pass
 
 
 def talajgeneralas(felulet, talaj, folyamatosvagynem):
