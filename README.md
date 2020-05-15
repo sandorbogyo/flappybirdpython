@@ -1,0 +1,2 @@
+# A Flappy Bird játék megvalósítása Python segítségével - BME VIK üzemmérnök-informatikus képzés NagyHázi
+Az ismert Flappy Bird játék Python változata: A célunk az, hogy a madarat irányítva minél több csőpáron jussunk át, miközben a madarunk folyamatosan lefelé esik, viszont klikkelés hatására mindig felfelé kezd repülni.
